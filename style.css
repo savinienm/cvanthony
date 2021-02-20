@@ -1,0 +1,1267 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Raleway", sans-serif;
+  color: #444444;
+}
+
+#h1submit {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+}
+
+h5 {
+  font-family: "Raleway", sans-serif;
+  color: hsl(192, 70%, 51%);
+}
+
+h3 {
+  box-sizing: border-box;
+  color: rgb(85, 85, 85);
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 31.2px;
+}
+
+h4 {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  font-weight: bold;
+  color: hsl(192, 70%, 51%);
+}
+
+h3::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: hsl(192, 70%, 51%);
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.grise {
+  background-color: hsl(220, 16%, 96%);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+#identite {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 1rem;
+  border-radius: 10px;
+  width: auto;
+}
+
+.accueil {
+  height: 100vh;
+  background-image: url(img/background.png);
+  background-attachment: local;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  z-index: 6;
+  display: block;
+  transition: 0.3s;
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  color: rgb(68, 68, 68);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2rem;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  text-align: left;
+}
+
+#logoNav {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.timeline-item {
+  padding: 3em 2em 2em;
+  position: relative;
+  color: rgba(43, 183, 218, 0.7);
+  border-left: 2px solid rgba(43, 183, 218, 0.3);
+}
+.timeline-item p {
+  font-size: 1rem;
+}
+.timeline-item::before {
+  content: attr(date-is);
+  position: absolute;
+  left: 2em;
+  font-weight: bold;
+  top: 1em;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.785rem;
+}
+.timeline-item::after {
+  width: 10px;
+  height: 10px;
+  display: block;
+  top: 1em;
+  position: absolute;
+  left: -7px;
+  border-radius: 10px;
+  content: "";
+  border: 2px solid rgba(43, 183, 218, 0.3);
+  background: white;
+}
+.timeline-item:last-child {
+  -o-border-image: linear-gradient(
+      to bottom,
+      rgba(43, 183, 218, 0.3) 60%,
+      transparent
+    )
+    1 100%;
+  border-image: -webkit-linear-gradient(
+      top,
+      rgba(43, 183, 218, 0.3) 60%,
+      transparent
+    )
+    1 100%;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(43, 183, 218, 0.3) 60%,
+      transparent
+    )
+    1 100%;
+}
+
+.chevron {
+  color: rgba(43, 183, 218);
+  font-size: 16px;
+  margin-right: 0.5rem;
+}
+
+.logo {
+  font-size: 50px;
+  color: rgb(85, 85, 85);
+  transition: all, 1s;
+}
+
+.logo:hover {
+  color: rgba(43, 183, 218);
+  transform: scale(1.2);
+}
+
+.hobby {
+  margin-right: 1rem;
+  font-size: 50px;
+  color: rgb(85, 85, 85);
+  transition: all, 1s;
+}
+
+.hobby:hover {
+  color: rgba(43, 183, 218);
+  transform: scale(1.2);
+}
+
+.centerL {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.centerL > i {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+#anthony {
+  width: 350px;
+}
+
+/* Pour l'effet hover sur la nav */
+/* NAVIGATION */
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  white-space: nowrap;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+nav ul li a:hover {
+  color: rgba(43, 183, 218);
+}
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: rgba(43, 183, 218);
+  height: 3px;
+}
+nav.stroke ul li a:hover:after {
+  width: 50%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: ".";
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+/* Pour l'effet tapé à la machine du titre à l'accueil */
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid rgba(43, 183, 218); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  font-size: 28px;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(43, 183, 218);
+  }
+}
+
+/* progressbar html */
+
+.progress1 { /* changer le 1 en un autre chiffre */
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(200, 200, 200, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar1 { /* changer le 1 en un autre chiffre */
+  height: 18px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar1 {
+  width: 85%; /* changer le pourcentage */
+  background-color:rgba(43, 183, 218);
+  animation: progressAnimation1 4s; /* changer le 1 par un autre chiffre */
+}
+
+@keyframes progressAnimation1 { /* changer le 1 par un autre chiffre */
+  0% {
+    width: 5%;
+    background-color: rgba(43, 183, 218);
+  }
+  85% { /* changer le pourcentage */
+    width: 85%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+  }
+}
+
+/* progressbar CSS */
+
+.progress2 { /* changer le 1 en un autre chiffre */
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(200, 200, 200, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar2 { /* changer le 1 en un autre chiffre */
+  height: 18px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar2 {
+  width: 80%; /* changer le pourcentage */
+  background-color:rgba(43, 183, 218);
+  animation: progressAnimation2 4s; /* changer le 1 par un autre chiffre */
+}
+
+@keyframes progressAnimation2 { /* changer le 1 par un autre chiffre */
+  0% {
+    width: 5%;
+    background-color: rgba(43, 183, 218);
+  }
+  80% { /* changer le pourcentage */
+    width: 80%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+  }
+}
+
+/* progressbar JS */
+
+.progress3 { /* changer le 1 en un autre chiffre */
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(200, 200, 200, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar3 { /* changer le 1 en un autre chiffre */
+  height: 18px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar3 {
+  width: 75%; /* changer le pourcentage */
+  background-color:rgba(43, 183, 218);
+  animation: progressAnimation3 4s; /* changer le 1 par un autre chiffre */
+}
+
+@keyframes progressAnimation3 { /* changer le 1 par un autre chiffre */
+  0% {
+    width: 5%;
+    background-color: rgba(43, 183, 218);
+  }
+  75% { /* changer le pourcentage */
+    width: 75%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+  }
+}
+
+/* progressbar php */
+
+.progress4 { /* changer le 1 en un autre chiffre */
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(200, 200, 200, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar4 { /* changer le 1 en un autre chiffre */
+  height: 18px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar4 {
+  width: 70%; /* changer le pourcentage */
+  background-color:rgba(43, 183, 218);
+  animation: progressAnimation4 4s; /* changer le 1 par un autre chiffre */
+}
+
+@keyframes progressAnimation4 { /* changer le 1 par un autre chiffre */
+  0% {
+    width: 5%;
+    background-color: rgba(43, 183, 218);
+  }
+  70% { /* changer le pourcentage */
+    width: 70%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+  }
+}
+
+/* progressbar sql */
+
+.progress5 { /* changer le 1 en un autre chiffre */
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(200, 200, 200, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar5 { /* changer le 1 en un autre chiffre */
+  height: 18px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar5 {
+  width: 70%; /* changer le pourcentage */
+  background-color:rgba(43, 183, 218);
+  animation: progressAnimation5 4s; /* changer le 1 par un autre chiffre */
+}
+
+@keyframes progressAnimation5 { /* changer le 1 par un autre chiffre */
+  0% {
+    width: 5%;
+    background-color: rgba(43, 183, 218);
+  }
+  70% { /* changer le pourcentage */
+    width: 70%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+  }
+}
+
+/* progressbar react */
+
+.progress6 { /* changer le 1 en un autre chiffre */
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(200, 200, 200, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar6 { /* changer le 1 en un autre chiffre */
+  height: 18px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar6 {
+  width: 60%; /* changer le pourcentage */
+  background-color:rgba(43, 183, 218);
+  animation: progressAnimation6 4s; /* changer le 1 par un autre chiffre */
+}
+
+@keyframes progressAnimation6 { /* changer le 1 par un autre chiffre */
+  0% {
+    width: 5%;
+    background-color: rgba(43, 183, 218);
+  }
+  60% { /* changer le pourcentage */
+    width: 60%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+  }
+}
+
+/* progressbar symfony */
+
+.progress7 { /* changer le 1 en un autre chiffre */
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(200, 200, 200, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar7 { /* changer le 1 en un autre chiffre */
+  height: 18px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar7 {
+  width: 60%; /* changer le pourcentage */
+  background-color:rgba(43, 183, 218);
+  animation: progressAnimation7 4s; /* changer le 1 par un autre chiffre */
+}
+
+@keyframes progressAnimation7 { /* changer le 1 par un autre chiffre */
+  0% {
+    width: 5%;
+    background-color: rgba(43, 183, 218);
+  }
+  60% { /* changer le pourcentage */
+    width: 60%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+  }
+}
+
+/* progressbar python */
+
+.progress8 { /* changer le 1 en un autre chiffre */
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(200, 200, 200, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar8 { /* changer le 1 en un autre chiffre */
+  height: 18px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar8 {
+  width: 60%; /* changer le pourcentage */
+  background-color:rgba(43, 183, 218);
+  animation: progressAnimation8 4s; /* changer le 1 par un autre chiffre */
+}
+
+@keyframes progressAnimation8 { /* changer le 1 par un autre chiffre */
+  0% {
+    width: 5%;
+    background-color: rgba(43, 183, 218);
+  }
+  60% { /* changer le pourcentage */
+    width: 60%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+  }
+}
+
+/* progressbar java */
+
+.progress9 { /* changer le 1 en un autre chiffre */
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(200, 200, 200, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar9 { /* changer le 1 en un autre chiffre */
+  height: 18px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar9 {
+  width: 50%; /* changer le pourcentage */
+  background-color:rgba(43, 183, 218);
+  animation: progressAnimation9 4s; /* changer le 1 par un autre chiffre */
+}
+
+@keyframes progressAnimation9 { /* changer le 1 par un autre chiffre */
+  0% {
+    width: 5%;
+    background-color: rgba(43, 183, 218);
+  }
+  50% { /* changer le pourcentage */
+    width: 50%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+  }
+}
+
+/* progressbar angular */
+
+.progress10 { /* changer le 1 en un autre chiffre */
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(200, 200, 200, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar10 { /* changer le 1 en un autre chiffre */
+  height: 18px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar10 {
+  width: 50%; /* changer le pourcentage */
+  background-color:rgba(43, 183, 218);
+  animation: progressAnimation10 4s; /* changer le 1 par un autre chiffre */
+}
+
+@keyframes progressAnimation10 { /* changer le 1 par un autre chiffre */
+  0% {
+    width: 5%;
+    background-color: rgba(43, 183, 218);
+  }
+  50% { /* changer le pourcentage */
+    width: 50%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+  }
+}
+
+/* progressbar français */
+
+.progress11 { /* changer le 1 en un autre chiffre */
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(200, 200, 200, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar11 { /* changer le 1 en un autre chiffre */
+  height: 18px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar11 {
+  width: 100%; /* changer le pourcentage */
+  background-color:rgba(43, 183, 218);
+  animation: progressAnimation11 4s; /* changer le 1 par un autre chiffre */
+}
+
+@keyframes progressAnimation11 { /* changer le 1 par un autre chiffre */
+  0% {
+    width: 5%;
+    background-color: rgba(43, 183, 218);
+  }
+  100% { /* changer le pourcentage */
+    width: 100%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+  }
+}
+
+/* progressbar anglais */
+
+.progress12 { /* changer le 2 par un autre chiffre */
+  padding: 6px;
+  border-radius: 30px;
+  background: rgba(200, 200, 200, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar12 { /* changer le 2 par un autre chiffre */
+  height: 18px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.5s linear;
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar12 { /* changer le 2 par un autre chiffre */
+  width: 90%; /* changer le pourcentage */
+  background-color:rgba(43, 183, 218);
+  animation: progressAnimation12 4s; /* changer le 2 par un autre chiffre */
+}
+
+@keyframes progressAnimation12 { /* changer le 2 par un autre chiffre */
+  0% {
+    width: 5%;
+    background-color: rgba(43, 183, 218);
+  }
+  90% { /* changer le pourcentage */
+    width: 90%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+  }
+}
+
+  /* Contact */
+  
+  input {
+    border: rgba(43, 183, 218) solid 1px;
+    border-radius: 30px;
+    width: 15rem;
+    height: 2.5rem;
+    cursor: pointer;
+  }
+  
+  .sendbutton {
+    background-color: rgba(43, 183, 218);
+    color: white;
+    border: rgba(43, 183, 218) solid 1px;
+    width: 8rem;
+    height: 2.5rem;
+  }
+  
+  .sendbutton:hover {
+    opacity: 0.7;
+    transition-duration: 0.8s;
+  }
+  
+  ::placeholder {
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .icones {
+    color: rgba(43, 183, 218);
+  }
+
+  .icones:hover {
+    opacity: 0.6;
+  }
+
+  .download {
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+  }
+
+@media all and (max-width: 960px) {
+  body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 2rem;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Raleway", sans-serif;
+    color: #444444;
+  }
+  
+  h5 {
+    font-family: "Raleway", sans-serif;
+    color: hsl(192, 70%, 51%);
+  }
+  
+  h3 {
+    box-sizing: border-box;
+    color: rgb(85, 85, 85);
+    font-family: "Raleway", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 31.2px;
+  }
+  
+  h4 {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+  
+  h3::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: hsl(192, 70%, 51%);
+    bottom: 0;
+    left: calc(50% - 25px);
+  }
+  
+  .grise {
+    background-color: hsl(220, 16%, 96%);
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  
+  #identite {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 360px;
+  }
+  
+  .accueil {
+    height: 100vh;
+    background-image: url(img/background.png);
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navigation {
+    position: fixed;
+    width: 100%;
+    z-index: 6;
+    display: block;
+    transition: 0.3s;
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  li {
+    color: rgb(68, 68, 68);
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2rem;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    text-align: left;
+  }
+  
+  #logoNav {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .timeline-item {
+    padding: 3em 2em 2em;
+    position: relative;
+    color: rgba(43, 183, 218, 0.7);
+    border-left: 2px solid rgba(43, 183, 218, 0.3);
+  }
+  .timeline-item p {
+    font-size: 1rem;
+  }
+  .timeline-item::before {
+    content: attr(date-is);
+    position: absolute;
+    left: 2em;
+    font-weight: bold;
+    top: 1em;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 0.785rem;
+  }
+  .timeline-item::after {
+    width: 10px;
+    height: 10px;
+    display: block;
+    top: 1em;
+    position: absolute;
+    left: -7px;
+    border-radius: 10px;
+    content: "";
+    border: 2px solid rgba(43, 183, 218, 0.3);
+    background: white;
+  }
+  .timeline-item:last-child {
+    -o-border-image: linear-gradient(
+        to bottom,
+        rgba(43, 183, 218, 0.3) 60%,
+        transparent
+      )
+      1 100%;
+    border-image: -webkit-linear-gradient(
+        top,
+        rgba(43, 183, 218, 0.3) 60%,
+        transparent
+      )
+      1 100%;
+    border-image: linear-gradient(
+        to bottom,
+        rgba(43, 183, 218, 0.3) 60%,
+        transparent
+      )
+      1 100%;
+  }
+  
+  .chevron {
+    color: rgba(43, 183, 218);
+    font-size: 16px;
+    margin-right: 0.5rem;
+  }
+  
+  .logo {
+    font-size: 50px;
+    color: rgb(85, 85, 85);
+    transition: all, 1s;
+  }
+  
+  .logo:hover {
+    color: rgba(43, 183, 218);
+    transform: scale(1.2);
+  }
+  
+  .hobby {
+    margin-right: 1rem;
+    font-size: 50px;
+    color: rgb(85, 85, 85);
+    transition: all, 1s;
+  }
+  
+  .hobby:hover {
+    color: rgba(43, 183, 218);
+    transform: scale(1.2);
+  }
+  
+  #leftH,
+  #rightH {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #leftH > i,
+  #rightH > i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+
+  #anthony {
+    width: 250px;
+  }
+  
+  /* Pour l'effet hover sur la nav */
+  /* NAVIGATION */
+  
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all 0.5s;
+  }
+  nav ul li a:hover {
+    color: rgba(43, 183, 218);
+  }
+  
+  /* stroke */
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ".";
+    color: transparent;
+    background: rgba(43, 183, 218);
+    height: 3px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 50%;
+  }
+  
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+  
+  nav.fill ul li a:after {
+    text-align: left;
+    content: ".";
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
+  
+  /* Pour l'effet tapé à la machine du titre à l'accueil */
+  
+  .typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid rgba(43, 183, 218); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    font-size: 14px;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: rgba(43, 183, 218);
+    }
+  }
+  
+  /* progressbar français */
+  
+  .progress1 { /* changer le 1 en un autre chiffre */
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(200, 200, 200, 0.25);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+      0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar1 { /* changer le 1 en un autre chiffre */
+    height: 18px;
+    border-radius: 30px;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.05)
+    );
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+  }
+  
+  .progress-moved .progress-bar1 {
+    width: 100%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+    animation: progressAnimation1 4s; /* changer le 1 par un autre chiffre */
+  }
+  
+  @keyframes progressAnimation1 { /* changer le 1 par un autre chiffre */
+    0% {
+      width: 5%;
+      background-color: rgba(43, 183, 218);
+    }
+    100% { /* changer le pourcentage */
+      width: 100%; /* changer le pourcentage */
+      background-color:rgba(43, 183, 218);
+    }
+  }
+  
+  /* progressbar anglais */
+  
+  .progress2 { /* changer le 2 par un autre chiffre */
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(200, 200, 200, 0.25);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+      0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar2 { /* changer le 2 par un autre chiffre */
+    height: 18px;
+    border-radius: 30px;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.05)
+    );
+    transition: 0.5s linear;
+    transition-property: width, background-color;
+  }
+  
+  .progress-moved .progress-bar2 { /* changer le 2 par un autre chiffre */
+    width: 90%; /* changer le pourcentage */
+    background-color:rgba(43, 183, 218);
+    animation: progressAnimation2 4s; /* changer le 2 par un autre chiffre */
+  }
+  
+  @keyframes progressAnimation2 { /* changer le 2 par un autre chiffre */
+    0% {
+      width: 5%;
+      background-color: rgba(43, 183, 218);
+    }
+    90% { /* changer le pourcentage */
+      width: 90%; /* changer le pourcentage */
+      background-color:rgba(43, 183, 218);
+    }
+  }
+
+  /* Contact */
+  
+  input {
+    border: rgba(43, 183, 218) solid 1px;
+    border-radius: 30px;
+    width: 15rem;
+    height: 2.5rem;
+    cursor: pointer;
+  }
+  
+  .sendbutton {
+    background-color: rgba(43, 183, 218);
+    color: white;
+    border: rgba(43, 183, 218) solid 1px;
+    width: 8rem;
+    height: 2.5rem;
+  }
+  
+  .sendbutton:hover {
+    opacity: 0.7;
+    transition-duration: 0.8s;
+  }
+  
+  ::placeholder {
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .icones {
+    color: rgba(43, 183, 218);
+  }
+
+  #textarea {
+    border: solid 1px rgba(43, 183, 218);
+  }
+
+  .icones:hover {
+    opacity: 0.6;
+  }
+
+}
